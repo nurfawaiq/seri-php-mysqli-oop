@@ -5845,7 +5845,7 @@ if (!class_exists('TCPDF', false)) {
 				for ($ypx = 0; $ypx < $hpx; ++$ypx) {
 					$colorindex = imagecolorat($img, $xpx, $ypx);
 					$col = imagecolorsforindex($img, $colorindex);
-					imagesetpixel($imgalpha, $xpx, $ypx, $this->getGDgamma((127 - $col['alpha']) * 255 / 127));
+					imagesetpixel($imgalpha, $xpx, $ypx, (int) $this->getGDgamma((127 - $col['alpha']) * 255 / 127));
 				}
 			}
 			// create temp alpha file
