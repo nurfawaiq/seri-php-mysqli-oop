@@ -5834,7 +5834,7 @@ if (!class_exists('TCPDF', false)) {
 			// get image size
 			list($wpx, $hpx) = getimagesize($file);
 			// generate images
-			$img = imagecreatefrompng($file);
+			$img = @imagecreatefrompng($file);
 			$imgalpha = imagecreate($wpx, $hpx);
 			// generate gray scale pallete
 			for ($c = 0; $c < 256; ++$c) {
